@@ -1,0 +1,836 @@
+.plus-minus-toggle {
+    cursor: pointer;
+    height: 21px;
+    position: absolute;
+    width: 21px;
+    left:-10px;
+    top:40%;
+    z-index:2;
+
+    &:before,
+    &:after {
+      background: #eee;
+      content: '';
+      height: 5px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 21px;
+      transition: transform 500ms ease;
+    }
+
+    &:after {
+      transform-origin: center;
+    }
+
+    &.collapsed {
+      &:after {
+        transform: rotate(90deg);
+
+      }
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+}
+
+.home-header {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    @media screen and (min-width: $tabwidth) {
+        height: 600px;
+    }
+    .shape-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.89;
+        }
+    }
+}
+
+.feat-content {
+    position: relative;
+    z-index: 5;
+    margin-top: 125px;
+    @media screen and (min-width: $tabwidth) {
+        margin-top:205px;
+    }
+    .home-feat-text {
+        width: 100%;
+        float: left;
+        margin-bottom: 40px;
+        @media screen and (min-width: $tabwidth) {
+            width: 40%;
+            margin-bottom: 0;
+        }
+    }
+    .home-feat-image {
+        width: 100%;
+        float: left;
+        .imgwrap {
+            width: 85%;
+            position: relative;
+            margin: 0 auto;
+            @media screen and (min-width: $tabwidth) {
+                float: left;
+                width: 100%;
+                left: 40px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media screen and (min-width: $tabwidth) {
+            width: 60%;
+        }
+    }
+    .textwrap {
+        color:#FFF;
+        font-weight: 300;
+        hyphens: none;
+        margin-bottom: 30px;
+        h2 {
+            margin: 0 0 4px;
+            font: {
+                size: 28px;
+                weight: 500;
+            }
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+    }
+    
+    .cta-button {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color:#FFF;
+        padding: 10px 20px 7px;
+        border-radius: 100px;
+        overflow: hidden;
+        width: 90%;
+        text-align: center;
+        float:none;
+        box-sizing: border-box;
+        margin: 0 auto 10px;
+        @include transition(all ease-out .2s);
+        @media screen and (min-width: $tabwidth) {
+            width: auto;
+            font-size: 1.6vw;
+            float: left;
+        }
+        @media screen and (min-width: $deskwidth) {
+            font-size:15px;
+            width: 170px;
+        }
+        
+        &.btn1 {
+            background: $color-green;
+            border:2px solid $color-green;
+            &:hover {
+                border:2px solid #FFF;
+            }
+            &.btn-style2 {
+                &:hover:before {
+                    background: #FFF;
+                }
+            }
+        }
+        &.btn2 {
+            border:2px solid #FFF;
+            &.btn-style2 {
+                &:hover:before {
+                    background: #FFF;
+                }
+            }
+            @media screen and (min-width: $tabwidth) {
+                float: right;
+            }
+        }
+        &.btn-style1 {
+            &:before {
+                background: #FFF;
+            }
+
+        }
+        &:hover {
+            color: $color-dark-blue;
+        }
+    }
+}
+
+.appurl,
+.cta-button-div {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    @media screen and (min-width: $tabwidth) {
+        width: 95%;
+        left: -2%;
+    }
+}
+
+
+.appurl {
+    a {
+        text-decoration: none;
+        outline: none;
+        display: inline-block;
+        width: 70%;
+       
+    }
+    img {
+        float: left;
+    }
+    .btnwrap {
+        display: inline-block;
+        float: left;
+        text-align: center;
+        margin-top:10px;
+        width: 50%;
+        @media screen and (min-width: $tabwidth) {
+            margin-top:40px;
+            
+            &.b2 {
+                float: right;
+            }
+        }
+        @media screen and (min-width: $deskwidth) {
+            width: 50%;
+        }
+    }
+}
+
+.midcontent {
+    .titlediv {
+        h2,h3 {
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.2;
+        } 
+        .section-title {
+            color:$color-green;
+            font-size:25px;
+            margin-top:3em;
+            margin-bottom: 0;
+        }
+        h3 {
+            color:$color-dark-blue;
+            font-size:27px;
+            margin-top:1.5em;
+        }
+    }
+    .mid-title {
+        margin-top: 0;
+        margin-bottom: 2em;
+    }
+    .col-title {
+        font-size:1.3em;
+        margin-bottom: 0.5em;
+    }
+    .columns {
+        margin-bottom: 30px;
+        .icon {
+            text-align: center;
+            span {
+                display: inline-block;
+                width: 100%;
+                height: 90;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left center;
+            }
+            @media screen and (min-width: $tabwidth) {
+                text-align: left;
+                span {
+                    height: 140px;
+                }
+            }
+        }
+        .column {
+            width: 100%;
+            float: left;
+            @media screen and (min-width: $tabwidth) {
+                width: 33.3333333%;
+            }
+        }
+        &.three {
+            .column {
+                width: 100%;
+                @media screen and (min-width: $tabwidth) {
+                    width: 33.3333333%;
+                }
+            }
+        }
+        .column .pad {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .a-column {
+        width: 100%;
+        float: left;
+        margin-bottom: 50px;
+        .photo {
+            width: 100%;
+            float: left;
+            @media screen and (min-width: $tabwidth) {
+                width: 30%;
+            }
+        }
+        .image {
+            overflow: hidden;
+            float: none;
+            max-width: 288px;
+            width: 100%;
+            height: 300px;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 7px 7px 27px -5px rgba(0,0,0,0.33);
+            margin: 0 auto;
+            @media screen and (min-width: $tabwidth) {
+                height: 300px;
+                float: left;
+                max-width: 100%;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                float: left;
+            }
+        }
+        .text {
+            width: 100%;
+            float: left;
+            .pad {
+                padding: 20px 0;
+            }
+            @media screen and (min-width: $tabwidth) {
+                width: 70%;
+                .pad {
+                    padding: 20px 50px;
+                }
+            }
+        }
+        &.even {
+            @media screen and (min-width: $tabwidth) {
+                .photo {
+                    float: right;
+                }
+            }
+        }
+    }
+    
+}
+.article-columns {
+    margin-top: 5em;
+    .buttondiv {
+        margin-top:1.5em;
+    }
+}
+.why-us-div {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    @media screen and (min-width: $tabwidth) {
+    }
+    .bgwrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(-1);
+    }
+    .shape-bottom{
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-attachment: scroll;
+        width: 100%;
+        height: 100%;
+        transform: scaleY(-1);
+    }
+    .section-content {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .text {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        hyphens: none;
+        text-align: left;
+        font-size: .85rem;
+        @media screen and (min-width: $tabwidth) {
+            width: 70%;
+            padding-right: 10px;
+            font-size:15px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+    }
+    .titlediv {
+        float: left;
+        width: 100%;
+        @media screen and (min-width: $tabwidth) {
+            width: 30%;
+        }
+        h3 {
+            margin: 0 0 .5em;
+            color:$color-dark-gray;
+            line-height: .85;
+            font: {
+                size: 40px;
+                weight:700;
+            }
+            span {
+                color:$color-green;
+            }
+            @media screen and (min-width: $tabwidth) {
+                font-size:80px;
+                text-align: right;
+                padding-right: 20px;
+                span {
+                    display: block;
+                    clear:both;
+                }
+            }
+        }
+    }
+}
+.footer {
+    .leftcol,
+    .rightcol {
+        float: left;
+        margin-bottom: 1.5em;
+        text-align: center;
+        @media screen and (min-width: $tabwidth) {
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+    .leftcol {
+        width: 100%;
+        @media screen and (min-width: $tabwidth) {
+            width: 40%;
+        }
+    }
+    .rightcol {
+        width: 100%;
+        @media screen and (min-width: $tabwidth) {
+            width: 60%;
+        }
+    }
+    .widget-title {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 23px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .frow.bottom {
+        margin-top: 15px;
+        @media screen and (min-width: $tabwidth) {
+            margin-top: 30px;
+        }
+    }
+    .rightcol .widget-content {
+        font-weight: 300;
+        p {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+    }
+    .branding {
+        text-align: center;
+        a {
+            display: inline-block;
+            max-width: 200px;
+            width: 100%;
+            @media screen and (min-width: $tabwidth) {
+                float: left;
+            }
+        }
+        img {
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+        @media screen and (min-width: $tabwidth) {
+            text-align: left;
+        }
+    }
+}
+.subscribe-form {
+    position: relative;
+    margin-top:1em;
+    @media screen and (min-width: $tabwidth) {
+        margin-top: 0;
+    }
+    form {
+        display: block;
+        width: 100%;
+        position: relative;
+        margin: 0 0;
+    }
+    .field {
+        position: relative;
+        width: 100%;
+        .icon {
+            position: absolute;
+            top: 6px;
+            left: 25px;
+            z-index: 3;
+            color: $color-green;
+            font-size: 30px;
+            width: 33px;
+            .st0{fill:#8CC540;}
+        }
+    }
+    input[type='text'],input[type='email'] {
+        width: 100%;
+        border: none;
+        background: #FFF;
+        line-height: 15px;
+        height: 20px;
+        padding: 25px 30px 22px 66px;
+        border-radius: 100px;
+        box-sizing: border-box;
+        box-shadow: none;
+        -webkit-appearance:none;
+        @include transition(all ease-out .2s);
+        outline: 0;
+        font-size:16px;
+        &:focus {
+            box-shadow: 0px 0px 12px 0px rgba(178,233,107,.8);
+        }
+    }
+    input[type='submit'] {
+        display: none;
+    }
+    button {
+        text-shadow: none;
+        box-shadow: none;
+        -webkit-appearance:none;
+        border: none;
+        background: $color-green;
+        position: absolute;
+        top: 0;
+        right: -2px;
+        z-index: 5;
+        height: 47px;
+        line-height: 47px;
+        box-sizing: border-box;
+        font-weight: 700;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 0 20px;
+        &:hover {
+            color:#FFF;
+            &:before {
+                background: #000;
+                opacity: 0.25;
+            }
+        }
+        @media screen and (min-width: $tabwidth) {
+            padding: 0 40px;
+        }
+    }
+    .note {
+        font-size: 13px;
+        font-weight: 300;
+        padding-top: 7px;
+        @media screen and (min-width: $tabwidth) {
+            padding-left: 10px;
+        }
+    }
+}
+
+.categoriesdiv {
+    ul {
+        margin: 0 0;
+        padding: 0 0;
+        list-style: none;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color:#FFF;
+            text-transform: uppercase;
+            padding:2px 0;
+            font:{
+                size:12px;
+                weight:300;
+            }
+            @include transition(all ease-out .2s);
+            &:hover {
+                color:$color-green;
+            }
+        }
+    }
+}
+.footer-info {
+    width: 100%;
+    float: left;
+    text-align: center;
+    .copyright {
+        font: {
+            size: 12px;
+            weight: 300;
+        }
+        opacity: 0.85;
+    }   
+    .ctxt {
+        position: relative;
+        padding-left: 10px;
+        padding-right: 7px;
+        &:before {
+            content:"";
+            display: block;
+            width: 1px;
+            height: 13px;
+            background: #FFF;
+            position: absolute;
+            top: 2px;
+            left: 0;
+        }
+        &.first {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.foot-menu {
+    margin-top: 30px;
+    @media screen and (min-width: $tabwidth) {
+        margin-top: 50px;
+    }
+    ul {
+        display: inline-block;
+        margin: 0 0;
+        padding: 0 0;
+        list-style: none;
+        ul {
+            display: none;
+        }
+    }
+    li {
+        float: left;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 16px;
+            background: $color-green;
+            position: absolute;
+            top: 3px;
+            left: 0;
+        }
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color:$color-green;
+        font:{
+            size:13px;
+            weight:500;
+        }
+        letter-spacing: 1px;
+        padding-left: 10px;
+        padding-right: 7px;
+        @include transition(all ease-out .2s);
+        &:hover {
+            color:#FFF;
+        }
+    }
+}
+.subpage .site-header.wrapper,
+.subpage .site-content.wrapper {
+    max-width: 100%;
+}
+.subpage .site-content.wrapper {
+    min-height: 30em;
+}
+.subpage .logo a {
+    @media screen and (min-width: $tabwidth) {
+        width: 230px;
+    }
+}
+.subpage #primary,
+.subpage #secondary {
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.subpage #primary {
+    .entry-title {
+        margin-top: 0;
+        font:{
+            size:30px;
+            weight:500;
+        }
+    }
+    .entry-content a {
+        color:$color-green;
+    }
+}
+.widget-area {
+    .widget {
+        border-bottom: 1px dotted #CCC;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .widget-title {
+        margin: 0 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font: {
+            size: 16px;
+            weight: 400;
+        }
+    }
+    .search-form {
+        position: relative;
+        width: 100%;
+        .search-field {
+            width: 100%;
+            border-radius: 100px;
+            line-height: 40px;
+            height: 40px;
+            padding: 3px 40px 3px 15px;
+            box-sizing: border-box;
+            outline: 0;
+            -webkit-appearance:none;
+            @include transition(all ease-out .3s);
+            &:focus {
+                box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.2);
+            }
+        }
+        .search-submit {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 3;
+            text-indent: -999em;
+            height: 100%;
+            width: 38px;
+            padding: 0 0;
+            visibility: hidden;
+        }
+        label {
+            position: relative;
+            &:before,
+            &:after {
+                content:"";
+                display: block;
+                position: absolute;
+                z-index: 2;
+                opacity: 0.7;
+            }
+            &:before {
+                width:18px;
+                height:18px;
+                border-radius: 100px;
+                border:2px solid #CCC;
+                top: 0;
+                right: 15px;
+            }
+            &:after {
+                width: 2px;
+                height: 7px;
+                background: #CCC;
+                top: 15px;
+                right: 15px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.inner404 {
+    max-width: 640px;
+    width: 100%;
+    margin: 12% auto 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.txt404 {
+    width: 100%;
+    float: left;
+    opacity: 0.45;
+    text-align: center;
+    @media screen and (min-width: $tabwidth) {
+        width: 35%;
+        text-align: left;
+    }
+    .big {
+        font-size:80px;
+        letter-spacing: -2px;
+        line-height: 1;
+        @media screen and (min-width: $tabwidth) {
+            font-size:100px;
+        }
+    }
+    .sm {
+        font-size: 25px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+        position: relative;
+        top: -16px;
+        left: 10px;
+        @media screen and (min-width: $tabwidth) {
+            left: 40px;
+        }
+    }
+}
+.main404xt {
+    width: 100%;
+    float: left;
+    text-align: center;
+    @media screen and (min-width: $tabwidth) {
+        width: 65%;
+        text-align: left;
+    }
+    .page-title {
+        font-size: 2em;
+        font-weight: 500;
+        line-height: 1.2;
+        margin: 0 0;
+        @media screen and (min-width: $tabwidth) {
+            font-size: 3em;
+        }
+    }
+}

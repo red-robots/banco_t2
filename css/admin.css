@@ -1,0 +1,63 @@
+#customize-control-color_options input {
+    margin-left: 0!important;
+}
+#customize-control-color_options .customize-inside-control-row {
+    position: relative;
+    display: block;
+    width:30px;
+    height:30px;
+    float: left;
+    margin: 6px 8px 0 0;
+    padding: 0 0;
+}
+#customize-control-color_options .customize-inside-control-row label {
+    color: transparent;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+#customize-control-color_options .customize-inside-control-row label:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    color: #FFF;
+    font-size: 16px;
+    top: 5px;
+    left: 0;
+    z-index: 10;
+}
+
+#customize-control-color_options .customize-inside-control-row input {
+    position: absolute;
+    top: 11px;
+    left: 7px;
+    z-index: 3;
+    visibility: hidden;
+}
+#customize-control-color_options .customize-inside-control-row input:checked + label:before {
+    content: "\2713";
+}
+#customize-control-button_bg_color,
+#customize-control-footer_bg_color {
+    border-top: 1px solid #CCC;
+    padding-top: 10px;
+    margin-top: 7px;
+}
+.customize-control-title .inst{
+    display: block;
+    width: 100%;
+    font-weight: normal;
+    font-size: 12px;
+    font-style: normal;
+    position: relative;
+    top:-4px;
+    opacity: 0.75;
+}
