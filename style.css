@@ -7185,7 +7185,7 @@ body {
     -webkit-transform: rotate(8deg);
         -ms-transform: rotate(8deg);
             transform: rotate(8deg);
-    left: -100%;
+    left: -140%;
     top: 100px; }
     @media screen and (min-width: 768px) {
       .triangle-bg3 .slope {

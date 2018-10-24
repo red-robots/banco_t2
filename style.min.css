@@ -1860,7 +1860,7 @@ body{background:#FFF;font-family:'Poppins',sans-serif;font-weight:400;font-size:
 .triangle-bg2 .slope{width:120%;height:200%;position:relative;background:#f5f5f5;-webkit-transform:rotate(3deg);-ms-transform:rotate(3deg);transform:rotate(3deg);left:-30%;top:90px}
 @media screen and (min-width:768px){.triangle-bg2 .slope{width:120%;left:-35%}
 }.triangle-bg3{z-index:1;height:80%;overflow:hidden}
-.triangle-bg3 .slope{width:200%;height:200%;position:relative;background:-webkit-linear-gradient(top,rgba(246,246,246,0.65) 0,rgba(255,255,255,0.33) 50%,rgba(255,255,255,0) 100%);background:linear-gradient(to bottom,rgba(246,246,246,0.65) 0,rgba(255,255,255,0.33) 50%,rgba(255,255,255,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6f6f6f6',endColorstr='#00ffffff',GradientType=0);-webkit-transform:rotate(8deg);-ms-transform:rotate(8deg);transform:rotate(8deg);left:-100%;top:100px}
+.triangle-bg3 .slope{width:200%;height:200%;position:relative;background:-webkit-linear-gradient(top,rgba(246,246,246,0.65) 0,rgba(255,255,255,0.33) 50%,rgba(255,255,255,0) 100%);background:linear-gradient(to bottom,rgba(246,246,246,0.65) 0,rgba(255,255,255,0.33) 50%,rgba(255,255,255,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6f6f6f6',endColorstr='#00ffffff',GradientType=0);-webkit-transform:rotate(8deg);-ms-transform:rotate(8deg);transform:rotate(8deg);left:-140%;top:100px}
 @media screen and (min-width:768px){.triangle-bg3 .slope{left:-50%;width:180%}
 }.text-center{text-align:center}
 .fullwidth{max-width:100%;width:100%}

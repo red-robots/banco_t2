@@ -25,15 +25,6 @@ $colors = ($fcontent) ? json_decode($fcontent,true) : array();
 </script>
 
 <style type="text/css">
-.shape-top .overlay,
-.shape-bottom .overlay { background-color: <?php echo $colors[$theme]; ?>; }
-<?php if($colors) { foreach($colors as $name=>$hex) { ?>
-.shape-bottom#color_<?php echo $name?> .overlay,
-.shape-top#color_<?php echo $name?> .overlay {
-    background-color: <?php echo $hex; ?>;
-}
-<?php } } ?>
-    
 .site-footer {
     background-color: <?php echo $footer_bg_color;?>;
 }
@@ -82,10 +73,17 @@ $colors = ($fcontent) ? json_decode($fcontent,true) : array();
 .subpage #primary .entry-content a, p a {
     color:<?php echo $content_link_color;?>;
 }
-
+.shape-top .overlay, .shape-bottom .overlay { background-color: <?php echo $colors[$theme]; ?>; }
 <?php if($colors) { foreach($colors as $name=>$hex) { ?>
 body#theme_<?php echo $name?>.subpage #masthead {
     background-color:<?php echo $hex;?>;
+}
+body#theme_<?php echo $name?> #site-navigation-mobile.main-navigation:before {
+    background-color:<?php echo $hex;?>;
+}
+.shape-bottom#color_<?php echo $name?> .overlay,
+.shape-top#color_<?php echo $name?> .overlay {
+    background-color: <?php echo $hex; ?>;
 }
 <?php } } ?>
  </style>
